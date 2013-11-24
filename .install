@@ -4,12 +4,15 @@ curl -L -o dotfiles.zip https://github.com/pongstr/dotfiles/archive/v1.0.0.zip &
 rm -rf dotfiles.zip
 mkdir -p "$HOME/Projects-2/"
 mv dotfiles-1.0.0 "$HOME/Projects-2/dotfiles"
+ln -s "$HOME/Projects-2/dotfiles" "$HOME/dotfiles"
 
 while true; do
+  echo    ""
   echo    "============================================================================"
   echo    "Welcome to Pongstr Dotfiles"
   echo    "You need Xcode and the latest Commandline Tools installed before installing "
   echo    "============================================================================"
+  echo    ""
   read -p "Would you like to proceed? " yn
 
   case $yn in
