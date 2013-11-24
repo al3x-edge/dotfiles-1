@@ -1,16 +1,9 @@
 #!/usr/bin/env
 
-# To run this, you must download & install
-# the latest Xcode App  and the Command-line Tools.
-#   - https://developer.apple.com/xcode/
-#   - https://developer.apple.com/downloads/
-
-
 curl -L -o dotfiles.zip https://github.com/pongstr/dotfiles/archive/v1.0.0.zip && unzip dotfiles.zip
 rm -rf dotfiles.zip
 mkdir -p "$HOME/Projects-2/"
 mv dotfiles-1.0.0 "$HOME/Projects-2/dotfiles"
-cd "$HOME/Projects-2/dotfiles"
 
 while true; do
   echo    "============================================================================"
@@ -20,7 +13,7 @@ while true; do
   read -p "Would you like to proceed? " yn
 
   case $yn in
-      [Yy]* ) sh .brew; break;;
+      [Yy]* ) cd "$HOME/Projects-2/dotfiles" && sh .brew; break;;
       [Nn]* ) exit;;
       * ) echo "Please answer yes or no.";;
   esac
