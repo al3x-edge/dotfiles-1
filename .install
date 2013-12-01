@@ -5,6 +5,7 @@ rm -rf dotfiles.zip
 mkdir -p "$HOME/Projects/"
 mv dotfiles-1.0.0 "$HOME/Projects/dotfiles"
 ln -s "$HOME/Projects/dotfiles" "$HOME/dotfiles"
+cd "$HOME/Projects/dotfiles" 
 
 while true; do
   echo    ""
@@ -16,7 +17,7 @@ while true; do
   read -p "Would you like to proceed? " yn
 
   case $yn in
-      [Yy]* ) cd "$HOME/Projects/dotfiles" && sh .brew; break;;
+      [Yy]* ) sh .brew;;
       [Nn]* ) exit;;
       * ) echo "Please answer yes or no.";;
   esac
