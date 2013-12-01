@@ -1,9 +1,9 @@
 #!/usr/bin/env
 
-curl -L -o dotfiles.zip https://github.com/pongstr/dotfiles/archive/v1.0.1.zip && unzip dotfiles.zip
+curl -L -o dotfiles.zip https://github.com/pongstr/dotfiles/archive/v1.0.2.zip && unzip dotfiles.zip
 rm -rf dotfiles.zip
 mkdir -p "$HOME/Projects/"
-mv dotfiles-1.0.1 "$HOME/Projects/dotfiles"
+mv dotfiles-1.0.2 "$HOME/Projects/dotfiles"
 ln -s "$HOME/Projects/dotfiles" "$HOME/dotfiles"
 cd "$HOME/Projects/dotfiles" 
 
