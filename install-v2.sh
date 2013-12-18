@@ -18,11 +18,12 @@ echo "                https://github.com/pongstr/dotfiles.git                  "
 
 # Download and install dotfiles
 curl -L -o dotfiles.zip https://github.com/pongstr/dotfiles/archive/v2.0.0-beta.zip && unzip dotfiles.zip
-mkdir -p "{$HOME}/Projects/"
+mkdir -p "{$HOME}/Projects2/"
 mv dotfiles-v2.0.0-beta "{$HOME}/Projects/dotfiles"
-ln -s "{$HOME}/Projects/dotfiles" "{$HOME}/dotfiles"
+ln -s "{$HOME}/Projects2/dotfiles" "{$HOME}/dotfiles"
 
-cd "$HOME/Projects/dotfiles" 
+cd "$HOME/Projects2/dotfiles" 
 
 # Cleanup
-rm -rf "{$HOME}/dotfiles.zip"
+rm -rf "dotfiles.zip"
+rm -rf "install-v2.sh"
