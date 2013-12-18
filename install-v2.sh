@@ -15,7 +15,8 @@ echo "     \__\/     \__\/        \__\/        \__\/                 \__\/     "
 echo ""
 echo "          Dotfiles (Pongstr v2.0.0) for setting up OSX Workspace.        "
 echo "                https://github.com/pongstr/dotfiles.git                  "
-
+echo "          =======================================================        "
+echo ""
 # Download and install dotfiles
 curl -L -o dotfiles.zip https://github.com/pongstr/dotfiles/archive/v2.0.0-beta.zip && unzip dotfiles.zip
 mkdir -p "$HOME/Projects2/"
