@@ -25,4 +25,4 @@ ln -s $HOME/Projects2/dotfiles $HOME/dotfiles
 
 # Cleanup and run bootstrap.sh
 rm -rf dotfiles-2.0.0-beta dotfiles.zip
-rm -rf install-v2.sh && sh $HOME/Projects2/dotfiles/bootstrap.sh
+rm -rf install-v2.sh && sh $HOME/dotfiles/bootstrap.sh
