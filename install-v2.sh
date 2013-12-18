@@ -23,8 +23,6 @@ mkdir -p "$HOME/Projects2/"
 mv dotfiles-v2.0.0-beta "$HOME/Projects/dotfiles"
 ln -s "$HOME/Projects2/dotfiles" "$HOME/dotfiles"
 
-sh $HOME/Projects2/dotfiles/bootstrap.sh
-
 # Cleanup
 rm -rf "dotfiles-2.0.0-beta"
-rm -rf "install-v2.sh"l-v2.sh"
+rm -rf "install-v2.sh" && sh $HOME/Projects2/dotfiles/bootstrap.sh
