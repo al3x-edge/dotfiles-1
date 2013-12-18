@@ -22,8 +22,8 @@ mkdir -p "{$HOME}/Projects2/"
 mv dotfiles-v2.0.0-beta "{$HOME}/Projects/dotfiles"
 ln -s "{$HOME}/Projects2/dotfiles" "{$HOME}/dotfiles"
 
-cd "$HOME/Projects2/dotfiles" && sh bootstrap.sh
+cd "{$HOME}/Projects2/dotfiles" && sh bootstrap.sh
 
 # Cleanup
-rm -rf "dotfiles.zip"
+rm -rf "dotfiles-2.0.0-beta"
 rm -rf "install-v2.sh"
