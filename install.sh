@@ -20,11 +20,11 @@ echo "        ..........................................................       "
 echo ""
 
 # Set Projects Directory here
-PROJECTSDIR="$HOME/Projects2"
+PROJECTSDIR="$HOME/Projects"
 
 # Set Dotfiles version here
-ARCHIVE="v2.0.0-beta"
-DOTFILE="2.0.0-beta"
+ARCHIVE="v2.0.0-beta.2"
+DOTFILE="v2.0.0-beta.2"
 
 # Download and install dotfiles
 curl -L -o dotfiles.zip "https://github.com/pongstr/dotfiles/archive/$ARCHIVE.zip" && unzip dotfiles.zip
