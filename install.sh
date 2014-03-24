@@ -19,24 +19,11 @@ echo "        .      https://github.com/pongstr/dotfiles.git           .       "
 echo "        ..........................................................       "
 echo ""
 
-# Set Projects Directory here
-PROJECTSDIR="$HOME/Projects"
+# Download Dotfiles
+curl -L -O https://github.com/pongstr/dotfiles/archive/master.zip
 
-# Set Dotfiles version here
-ARCHIVE="v2.0.0-beta.2"
+# Unzip and remove .zip file
+unzip dotfiles-master.zip && rm -rf master.zip
 
-# Download and install dotfiles
-curl -L -o dotfiles.zip "https://github.com/pongstr/dotfiles/archive/$ARCHIVE.zip" && unzip dotfiles.zip
-
-# Create Projects Directory
-mkdir -p "$PROJECTSDIR"
-
-# Move unzipped files to $PROJECTSDIR
-mv "dotfiles-$ARCHIVE" "$PROJECTSDIR/dotfiles"
-
-# Create dotfiles alias to Home folder for easier access
-ln -s "$PROJECTSDIR/dotfiles" "$HOME/dotfiles"
-
-# Cleanup and run bootstrap.sh
-rm -rf "dotfiles-$ARCHIVE" "dotfiles.zip"
-rm -rf install-v2.sh && sh $PROJECTSDIR/dotfiles/bootstrap.sh
+# Move to Home folder and begin bootstrapping
+mv dotfiles-master $HOME/.dotfiles && sh $HOME/.dotfiles/bootstrap.sh
