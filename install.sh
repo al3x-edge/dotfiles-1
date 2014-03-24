@@ -23,7 +23,9 @@ echo ""
 curl -L -O https://github.com/pongstr/dotfiles/archive/master.zip
 
 # Unzip and remove .zip file
-unzip dotfiles-master.zip && rm -rf master.zip
+echo "✓ Extracting dotfiles..."
+unzip master.zip && rm -rf master.zip
 
 # Move to Home folder and begin bootstrapping
+echo "✓ Installing dotfiles to $HOME/.dotfiles"
 mv dotfiles-master $HOME/.dotfiles && sh $HOME/.dotfiles/bootstrap.sh
